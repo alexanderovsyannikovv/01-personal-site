@@ -1,0 +1,370 @@
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1030px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* .page 
+==========================*/
+
+.page {
+    width: 100%;
+    height: 100vh;
+    min-height: 770px;
+    position: relative;
+    overflow: hidden;
+
+    background: #000 url("../img/bg.jpg") center no-repeat;
+    background-size: cover;
+}
+
+/* .header
+==========================*/
+
+.header {
+    padding: 1rem 0;
+    margin-bottom: 108px;
+
+    background: #2B7DED;
+}
+
+.header-inner {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-brand {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header-logo img {
+    display: block;
+}
+
+.header-nav {
+    display: flex;
+}
+
+.header-nav-link {
+    margin-left: 1.5rem;
+
+    font-size: 1rem;
+    color: #FFFFFF;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition: color 0.2s linear;
+}
+
+.header-nav-link:hover {
+    color: #9bbce9;
+}
+
+.header-nav-link.active {
+    position: relative;
+}
+
+.header-nav-link.active::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+
+    background-color: #FFFFFF;
+
+    position: absolute;
+    left: 0;
+    bottom: -0.25rem;
+}
+
+/* .content
+==========================*/
+
+.content {
+    height: 100%;
+    width: 100%;
+    max-width: 565px;
+}
+
+.content-header {
+    margin-bottom: 2.4rem;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    font-weight: 300;
+    opacity: 60%;
+}
+
+.title {
+    font-size: 2rem;
+    color: #FFFFFF;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.title span {
+    color: #2B7DED;
+}
+
+.text {
+    margin-bottom: 2.6rem;
+
+    font-size: 1rem;
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+/* .btn
+==========================*/
+
+.btn {
+    display: inline-block;
+    padding: 12px 35px;
+
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.1;
+    color: #FFFFFF;
+    font-weight: 500;
+    
+    background-color: #2B7DED;
+    border: 0;
+    border-radius: 0.3em;
+    text-decoration: none;
+
+    transition: background 0.2s linear;
+
+    cursor: pointer;
+}
+
+.btn-form {
+    display: block;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #2163bf;
+}
+
+/* .author
+==========================*/
+
+.author {
+    position: absolute;
+    bottom: 0;
+    right: 3rem;
+}
+
+/* .footer
+==========================*/
+
+.footer {
+    width: 100%;
+
+    position: absolute;
+    bottom: 44px;
+    left: 0;
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+}
+
+.contacts-link {
+    margin-right: 2rem;
+
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contacts-link:last-child {
+    margin-right: 0;
+
+    position: relative;
+}
+
+.contacts-link:last-child::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    right: -7.5rem;
+    bottom: 0.7rem;
+
+    background-color: #FFFFFF;
+    height: 0.1rem;
+    width: 5.3rem;
+
+    pointer-events: none;
+}
+
+.contacts-link:hover {
+    text-decoration: underline;
+}
+
+.contacts-link img {
+    margin-right: 5px;
+}
+
+/* .form
+==========================*/
+
+.form {
+    width: 100%;
+    max-width: 18.6rem;
+}
+
+.form-group {
+    margin-bottom: 1.3rem;
+}
+
+.input,
+.textarea {
+    display: block;
+    width: 100%;
+    padding: 12px 18px;
+
+    font-family: inherit;
+    font-size: 1rem;
+    color: #FFFFFF;
+    
+    border: 0;
+    border-radius: 0.3rem;
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+.textarea {
+    height: 6.6rem;
+    resize: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: #FFFFFF;
+}
+
+/* MEDIA
+==========================*/
+@media (max-width: 1000px) {
+    .page {
+        min-height: 100vh;
+        height: auto;
+
+        padding-bottom: 2rem;
+    }
+
+    .content {
+        text-align: center;
+        max-width: none;
+    }
+
+    .form {
+        margin: 0 auto;
+    }
+
+    .footer {
+        position: static;
+
+        margin-top: 2rem;
+    }
+
+    .author {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        margin-bottom: 3rem;
+    }
+
+    .header-logo {
+        display: none;
+    }
+
+    .header-brand {
+        font-size: 1.2rem;
+    }
+
+    .contacts {
+        flex-direction: column;
+    }
+
+    .contacts-link:last-child::after {
+        display: none;
+    }
+
+    .contacts-link {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .header-inner {
+        flex-direction: column;
+    }
+
+    .header-brand {
+        margin-bottom: 0.8rem;
+    }
+
+    .contacts-link:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .contacts-link {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 290px) {
+    .header-nav-link {
+        margin-left: 1rem;
+    }
+}
